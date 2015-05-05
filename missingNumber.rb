@@ -7,6 +7,6 @@ def missingNumber(array)
  (1..10).to_a - array
 end
 
-arr = [1, 2, 4, 5 , 6, 7, 8, 9, 10]
+arr = [1, 2, 5, 4 , 7, 6, 8, 9, 10]
 
 puts missingNumber(arr)
