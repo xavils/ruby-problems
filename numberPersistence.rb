@@ -6,16 +6,18 @@
 
 # Write a function to find the `additive persistence` of a number
 
-def additivePersistence(number, times, base = 10)
+def additivePersistence(number, times)
   # your magic
-  sum = number.to_s(base).split(//).inject(0) {|z, x| z + x.to_i(base)}
-  times += 1
+  numString = number.to_s
+  sum = 0
+  numString.each_char {|digit| sum += digit.to_i}
 
   if sum > 9 
+	  times += 1
     puts additivePersistence(sum, times)
   else
     puts times
   end
 end
 
-puts additivePersistence(2718, 0)
+puts additivePersistence(5, 0)

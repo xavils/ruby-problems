@@ -16,7 +16,7 @@ def tripleDouble(triple,double)
 
 	    if (num1S[i] == num1S[i+1]) && (num1S[i+1] == num1S[i+2])
 
-	      if num2S.index(num1S[i]+ num1S[i+1]) != nil
+	      if num2S.index(num1S[i] * 2)
           return 1
 	      else
 	      	return 0
