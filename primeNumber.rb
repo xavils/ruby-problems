@@ -3,7 +3,7 @@
 
 def PrimeNumber?(number)
 	i = 2
-	while i < number-1	  	
+	while i < number	  	
 	  return false if number % i == 0
 	  i += 1
 	end
@@ -12,3 +12,10 @@ end
 
 puts PrimeNumber?(27)
 puts PrimeNumber?(37)
+
+# require 'prime'
+# def PrimeNumber?(number)
+#     number.prime?
+# end
+
+# puts PrimeNumber?(7)
