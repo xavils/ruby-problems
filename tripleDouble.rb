@@ -16,18 +16,21 @@ def tripleDouble(triple,double)
 
 	    if (num1S[i] == num1S[i+1]) && (num1S[i+1] == num1S[i+2])
 
-	      if num2S.index(num1S[i]+ num1S[i+1]) != -1
-          puts 1
+	      if num2S.index(num1S[i]+ num1S[i+1]) != nil
+          return 1
 	      else
-	      	puts 0
+	      	return 0
 	      end
 
 	    end
 	    i += 1
 	  end
+    return 0
 	else
-	  puts 0
+	  return 0
 	end
 end
 
 puts tripleDouble(451999277, 41177722899)
+puts tripleDouble(45199277, 41177722899)
+puts tripleDouble(451999277, 4117289)

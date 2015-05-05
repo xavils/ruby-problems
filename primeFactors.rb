@@ -4,35 +4,21 @@
 
 def primeFactors(number)
   factors = []
-  theFactors = []
-  i = 2
 
-  while i <= number
-    if PrimeNumber?(i)
-      factors.push(i)
-    end
-    i += 1
-  end
- 	
-  while i < factors.length
-  	if number % factors[i] == 0
-  		theFactors.push(factors[i])
+  while (number > 1) do
+  	i = 2
+  	while i<=number && number%i != 0 do
+  		i += 1
   	end
-  	i += 1
+  	factors << i
+  	number /= i
   end
-  puts theFactors;
+  factors.sort
 end
 
-def PrimeNumber?(number)
-	i = 2
-	while i < number	  	
-	  return false if number % i == 0
-	  i += 1
-	end
-	return true
-end
-
-puts primeFactors(27)
+puts "Factors of 12: #{primeFactors(12)}"
+puts "Factors of 11: #{primeFactors(11)}"
+puts "Factors of 36: #{primeFactors(36)}"
 
 
 

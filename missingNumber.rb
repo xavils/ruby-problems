@@ -4,9 +4,11 @@
 
 def missingNumber(array)
   # your magic
- (1..10).to_a - array
+ (1..100).to_a - array
 end
 
-arr = [1, 2, 5, 4 , 7, 6, 8, 9, 10]
+arr = (1..100).to_a
+# (1..100).each {|i| arr << i }
 
+arr.delete(35)
 puts missingNumber(arr)
